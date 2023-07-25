@@ -1,0 +1,108 @@
+{
+    "english_quiz": [
+      {
+        "question": "What is the correct plural form of 'cactus'?",
+        "options": ["cactuses", "cacti", "cactus'", "cactuss"],
+        "correct_answer": "cacti"
+      },
+      {
+        "question": "Identify the correct sentence with proper subject-verb agreement:",
+        "options": ["The team are playing well.", "The book were on the table.", "The dog barks loudly.", "The flowers smells sweet."],
+        "correct_answer": "The dog barks loudly."
+      },
+      {
+        "question": "What is the synonym for the word 'ephemeral'?",
+        "options": ["lasting", "eternal", "transient", "perpetual"],
+        "correct_answer": "transient"
+      },
+      {
+        "question": "Choose the correctly spelled word:",
+        "options": ["aggresive", "accomodate", "necessary", "embarass"],
+        "correct_answer": "necessary"
+      },
+      {
+        "question": "Identify the figure of speech in the sentence: 'Her smile is as bright as the sun.'",
+        "options": ["simile", "metaphor", "personification", "hyperbole"],
+        "correct_answer": "simile"
+      }
+    ],
+    "iq_quiz": [
+      {
+        "question": "If all roses are flowers, and some flowers fade quickly, can we conclude that some roses fade quickly?",
+        "options": ["Yes", "No"],
+        "correct_answer": "Yes"
+      },
+      {
+        "question": "Which number is the odd one out? 3, 7, 11, 15, 18",
+        "options": ["3", "7", "15", "18"],
+        "correct_answer": "18"
+      },
+      {
+        "question": "If you rearrange the letters 'LANIMARC,' you would get the name of a:",
+        "options": ["Animal", "City", "Country", "Fruit"],
+        "correct_answer": "Country"
+      },
+      {
+        "question": "If a plane crashes on the border between the USA and Canada, where would the survivors be buried?",
+        "options": ["USA", "Canada"],
+        "correct_answer": "Survivors would not be buried; they are alive."
+      },
+      {
+        "question": "Complete the following series: 3, 6, 9, 12, ___",
+        "options": ["13", "14", "15", "16"],
+        "correct_answer": "15"
+      }
+    ],
+    "technical_quiz": [
+      {
+        "question": "What does CSS stand for in web development?",
+        "options": ["Creative Style Sheets", "Cascading Style Sheets", "Computer Style Sheets", "Colorful Style Sheets"],
+        "correct_answer": "Cascading Style Sheets"
+      },
+      {
+        "question": "Which HTML tag is used for creating a hyperlink?",
+        "options": ["link", "a", "hyperlink", "url"],
+        "correct_answer": "a"
+      },
+      {
+        "question": "In JavaScript, what is the purpose of the 'setTimeout()' function?",
+        "options": ["To execute a function repeatedly at a fixed interval", "To delay the execution of a function by a specified time", "To stop the execution of a function", "To execute a function immediately"],
+        "correct_answer": "To delay the execution of a function by a specified time"
+      },
+      {
+        "question": "What is the main purpose of a version control system like Git?",
+        "options": ["To manage databases", "To host websites", "To track changes in source code and collaborate with developers", "To create graphical user interfaces"],
+        "correct_answer": "To track changes in source code and collaborate with developers"
+      },
+      {
+        "question": "Which programming language is commonly used for creating web server applications?",
+        "options": ["Python", "Java", "C++", "Node.js"],
+        "correct_answer": "Node.js"
+      },
+      {
+        "question": "What does the acronym API stand for in software development?",
+        "options": ["Application Programming Interface", "Advanced Programming Interface", "Automated Program Integration", "Application Program Instruction"],
+        "correct_answer": "Application Programming Interface"
+      },
+      {
+        "question": "Which data format is commonly used for exchanging data between a client and server in web applications?",
+        "options": ["JSON", "XML", "YAML", "CSV"],
+        "correct_answer": "JSON"
+      },
+      {
+        "question": "What is the purpose of the SQL language in database management?",
+        "options": ["To style web pages", "To define the structure and schema of a database", "To perform mathematical calculations", "To manage database transactions"],
+        "correct_answer": "To define the structure and schema of a database"
+      },
+      {
+        "question": "Which of the following is not a valid data type in Python?",
+        "options": ["int", "float", "decimal", "str"],
+        "correct_answer": "decimal"
+      },
+      {
+        "question": "What is the output of the following code snippet in Python? \nprint(2 ** 3 ** 2)",
+        "options": ["8", "64", "512", "256"],
+        "correct_answer": "512"
+      }
+    ]
+  }

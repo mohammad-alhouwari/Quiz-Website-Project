@@ -1,0 +1,120 @@
+body {
+    background-color: #F6F1F1;
+
+}
+
+small {
+    color: red;
+    text-align: left;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #AFD3E2;
+    padding: 30px;
+    border-radius: 8px;
+    gap: 10px;
+}
+
+.SignUpImage {
+    width: 40%;
+    height: 40%;
+}
+
+.signUpLayout {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 20%;
+    align-items: center;
+}
+
+.signupNote1 {
+    font-size: 8px;
+    color: gray;
+    text-align: left;
+}
+
+.signupNote2 {
+    display: inline-block;
+    font-size: 8px;
+    font-weight: bold;
+    text-align: left;
+    color: #146C94;
+}
+
+.signupNote3 {
+    display: inline-block;
+    font-size:x-small;
+    font-weight: bold;
+    text-align: left;
+    color: #146C94;
+}
+
+.signupNote4 {
+    display: inline-block;
+    font-size:xx-small;
+    font-weight: bold;
+    text-align: left;
+    color: #146C94;
+    text-decoration: underline;
+    color: 146C94;
+}
+
+hr {
+    height: 1px;
+    background-color: #333;
+    border: none;
+    margin: 10px 0;
+}
+
+#showPasswordIcon{
+    cursor: pointer;
+    position: absolute;
+    top:41%;
+    left: 48%;
+    transform: translateY(-50%);
+}
+
+.inputControl {
+    position: relative;
+}
+
+.showPassword {
+    position: absolute;
+    cursor: pointer;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.navbar-brand img {
+    width: 200px;
+margin-right: 700px;}
+
+.bg-light {
+    background-color: #146c94 !important;
+}
+
+.home-link {
+    color: white;
+    font-size: x-large;
+    font-weight: bolder;
+    margin-right: 10px;
+    padding: 8px;
+}
+
+.home-link:hover {
+    color: #afd3e2;
+    transition: 0.3s;
+    text-decoration: underline;
+}
+
+
+#navbarNav {
+    justify-content: start;
+}

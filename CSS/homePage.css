@@ -1,0 +1,275 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+p {
+    margin: 0px;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+}
+
+button:focus {
+    outline: none;
+}
+
+.navbar-brand img {
+    width: 200px;
+}
+
+.bg-light {
+    background-color: #146c94 !important;
+}
+
+.home-link {
+    color: white;
+    font-size: larger;
+    margin-right: 10px;
+    padding: 8px;
+}
+
+.home-link:hover {
+    color: #afd3e2;
+    transition: 0.3s;
+    text-decoration: underline;
+}
+
+.log-link {
+    color: white;
+    font-size: larger;
+    margin-right: 10px;
+    padding: 8px;
+}
+
+.log-link:hover {
+    color: #afd3e2;
+    transition: 0.3s;
+    text-decoration: underline;
+}
+
+.nav-item img {
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%; 
+    display: none;
+    margin-right: 30px;
+}
+
+#navbarNav {
+    justify-content: end;
+}
+
+#headerUserName {
+    display: none;
+    color: rgb(102, 245, 102);
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+#userHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logoutCont {
+    display: none;
+}
+
+.container {
+    text-align: center;
+    color: #146c94;
+    margin-top: 20px;
+}
+#seeResultBtn{
+    display: none;
+}
+
+.box {
+    background-color: #afd3e2;
+    font-size: large;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.cont {
+    text-align: center;
+    color: #146c94;
+    margin-top: 20px;
+}
+
+.exam {
+    display: block;
+    font-weight: bold;
+}
+
+.exam h2 {
+    font-weight: bold;
+}
+
+.image-text {
+    display: grid;
+    grid-template-columns: auto auto;
+    text-align: start;
+}
+
+.image img {
+    width: 70%;
+    height: 70%;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: auto;
+    box-shadow: 10px 8px 6px #146c94;
+}
+
+.text {
+    margin-top: 100px;
+    text-align: start;
+    font-size: x-large;
+}
+
+.text button {
+    background-color: #afd3e2;
+    margin-top: 20px;
+    width: 200px;
+    height: 50px;
+    border: #146c94;
+    border-radius: 20px;
+    color: black;
+    transition: 0.3s;
+}
+
+.text button:hover {
+    box-shadow: 10px 8px 6px #146c94;
+}
+
+.text button a {
+    color: black;
+    text-decoration: none;
+}
+
+footer {
+    background-color: #146c94;
+}
+
+.foot {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 20px;
+    background-color: #146c94;
+    padding: 20px;
+}
+
+.card {
+    padding: 20px;
+    background-color: #146c94;
+    border: #146c94;
+    color: white;
+    gap: 10px;
+}
+
+.paragraph a {
+    text-decoration: none;
+    color: white;
+}
+
+.image-card img {
+    margin-top: 50px;
+    width: 300px;
+}
+
+.copy {
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .footer {
+        grid-template-columns: auto auto;
+    }
+
+    .cont {
+        margin-bottom: 20px;
+    }
+
+    .navbar-nav {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .box {
+        font-size: medium;
+    }
+
+    .text {
+        margin-bottom: 50px;
+    }
+
+    .image-card img {
+        width: 200px;
+        margin-top: 10px;
+    }
+
+    .card h2 {
+        font-size: medium;
+    }
+
+    .card p {
+        font-size: medium;
+    }
+
+    .copy {
+        font-size: medium;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .navbar-nav {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .navbar-brand img {
+        width: 200px;
+    }
+
+    .box {
+        font-size: medium;
+    }
+
+    .image-text {
+        display: block;
+    }
+
+    .image-text .image {
+        display: flex;
+        justify-content: center;
+    }
+
+    .text {
+        margin-bottom: 20px;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .foot {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .image-card img {
+        width: 90%;
+        height: 90%;
+        margin-top: 10px;
+    }
+
+
+}
