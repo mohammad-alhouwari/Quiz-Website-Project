@@ -1,3 +1,62 @@
+let allUsers = JSON.parse(localStorage.getItem("usersInfo"));
+let loggedInUser = {};
+
+
+let loginBtn = document.getElementById("login");
+let logoutBtn = document.getElementById("logout");
+let logoutCont = document.getElementById("logoutCont");
+let loginCont = document.getElementById("loginCont");
+let registerCont = document.getElementById("registerCont");
+let headerUserName = document.getElementById("headerUserName");
+
+for(let i = 0; i < allUsers.length; i++) {
+    if(allUsers[i].isLoggedIn === true) {
+        loggedInUser = allUsers[i];
+        logoutCont.style.display = "block"
+        loginCont.style.display = "none";
+        registerCont.style.display = "none";
+        headerUserName.style.display = "inline";
+        headerUserName.textContent = `${loggedInUser.firstName} ${loggedInUser.lastName}`;
+        userIndex=i;
+        break;
+    }
+}
+
+
+logoutBtn.onclick = () => {
+    for (let i = 0; i < allUsers.length; i++) {
+        allUsers[i].isLoggedIn = false;     
+    }
+    localStorage.setItem("usersInfo", JSON.stringify(allUsers));
+    window.location.href = "/HTML/homepage.html";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const engBtn = document.querySelector('.engBtn');
 const iQBtn = document.querySelector('.iQBtn');
 const tecBtn = document.querySelector('.tecBtn');

@@ -19,6 +19,7 @@ let quizTypeIndex = 0; // Index to keep track of the current quiz type
 let questionIndex = 0; // Index to keep track of the current question
 let quizzes = {};
 let answers = [];
+let userIndex;
 let fixedAlerts = document.getElementById("fixed");
 let fixedREADY = document.getElementById("READY");
 let sure = true;
@@ -38,14 +39,20 @@ for(let i = 0; i < allUsers.length; i++) {
         registerCont.style.display = "none";
         headerUserName.style.display = "inline";
         headerUserName.textContent = `${loggedInUser.firstName} ${loggedInUser.lastName}`;
-
+        userIndex=i;
         break;
     }
 }
 
 
 
-
+logoutBtn.onclick = () => {
+    for (let i = 0; i < allUsers.length; i++) {
+        allUsers[i].isLoggedIn = false;     
+    }
+    localStorage.setItem("usersInfo", JSON.stringify(allUsers));
+    window.location.href = "/HTML/homepage.html";
+}
 
 
 
@@ -123,6 +130,7 @@ fetch(`/JS/quizApp.json`)
         
         if (savedQuestionIndex == null && savedQuizIndex == null) {
             fixedAlerts.style.display = "flex";
+            document.body.style.overflow = "hidden";
         }else{
             startCountdown();
         }
@@ -247,6 +255,7 @@ fixedAlerts.innerHTML = `
 `;
 
 function fixedBTN() {
+    document.body.style.overflow = "scroll";
     fixedAlerts.style.display = "none";
 }
 
@@ -360,7 +369,8 @@ function nextQuestion() {
                     </div>
                     `;
                     if( progressWidth == 20 ){
-                fixedAlerts.style.display = "flex";
+                        fixedAlerts.style.display = "flex";
+                        document.body.style.overflow = "hidden";
                     }
                 quizTitle.textContent = 'IQ Quiz';
                 quizTypeImage.src = '/Images/IQTest.svg'
@@ -385,7 +395,8 @@ function nextQuestion() {
                 quizTitle.textContent = 'Technical Quiz';
                 quizTypeImage.src = `/Images/techSkills.svg`
                 if( progressWidth == 10 ){
-                fixedAlerts.style.display = "flex";
+                    fixedAlerts.style.display = "flex";
+                    document.body.style.overflow = "hidden";
                 }
                 sure = false;
             }
@@ -441,7 +452,7 @@ function nextQuestion() {
 
 
 
-
+console.log(allUsers[userIndex]);
 
 
 
@@ -494,7 +505,14 @@ function startCountdown() {
 // startCountdown();
 
 function submitAnswers() {
-    localStorage.setItem("Answers", JSON.stringify(answers));
+    let tempAnswers = JSON.parse(sessionStorage.getItem("tempAnswers"));
+        if (tempAnswers == null) {
+            tempAnswers = ["user didn't answer any question"];
+        }
+        allUsers[userIndex].userAnswers=tempAnswers;
+
+        localStorage.setItem("usersInfo", JSON.stringify(allUsers));
+        // localStorage.setItem("Answers", JSON.stringify(answers));
 }
 
 function setProgressFill() {
