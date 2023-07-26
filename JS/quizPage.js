@@ -144,7 +144,7 @@ fetch(`/JS/quizApp.json`)
             quizTitle.textContent = 'Technical Quiz';
             quizTypeImage.src = `/Images/techSkills.svg`
         }
-
+        
 
 
 

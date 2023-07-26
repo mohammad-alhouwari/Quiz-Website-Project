@@ -1,5 +1,53 @@
+let allUsers = JSON.parse(localStorage.getItem("usersInfo"));
+let loggedInUser = {};
+let loginBtn = document.getElementById("login");
+let logoutBtn = document.getElementById("logout");
+let logoutCont = document.getElementById("logoutCont");
+let loginCont = document.getElementById("loginCont");
+let registerCont = document.getElementById("registerCont");
+let headerUserName = document.getElementById("headerUserName");
+let startQuizLink = document.getElementById("startQuizLink");
+
+// 
+let startQuizBtn = document.getElementById("startQuizBtn");
+let seeResultBtn = document.getElementById("seeResultBtn");
+let userIndex;
+
+// 
+for(let i = 0; i < allUsers.length; i++) {
+    if(allUsers[i].isLoggedIn === true) {
+        loggedInUser = allUsers[i];
+        logoutCont.style.display = "block"
+        loginCont.style.display = "none";
+        registerCont.style.display = "none";
+        headerUserName.style.display = "inline";
+        userIndex=i;
+        headerUserName.textContent = `${loggedInUser.firstName} ${loggedInUser.lastName}`;
+        break;
+    }
+
+}
+
+logoutBtn.onclick = () => {
+    for (let i = 0; i < allUsers.length; i++) {
+        allUsers[i].isLoggedIn = false;     
+    }
+    localStorage.setItem("usersInfo", JSON.stringify(allUsers));
+    location.href = "/HTML/homePage.html";
+}
+
+
+
+
+
+
+
+
+
+
+
 let score = 0;
-let userAnswers = JSON.parse(localStorage.getItem('Answers'));
+let userAnswers = allUsers[userIndex].userAnswers
 let correctAnswers = [];
 console.log(userAnswers)
 Result = document.getElementById("result");

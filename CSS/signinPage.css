@@ -18,6 +18,33 @@ form {
     gap: 10px;
 }
 
+#header {
+    padding: 20px;
+    background-color: #146c94;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  #home-link {
+    position: absolute;
+    left: 20px;
+    font-size: 22px;
+    color: white;
+  }
+  
+  
+  #home-link a:visited {
+    color: white;
+  }
+  
+  #home-link:hover {
+    color: #afd3e2;
+    transition: 0.3s;
+    text-decoration: underline;
+  }
+
 .SignUpImage {
     width: 40%;
     height: 40%;
@@ -118,3 +145,30 @@ margin-right: 700px;}
 #navbarNav {
     justify-content: start;
 }
+
+
+@media (max-width: 480px) {
+    #header img {
+        width: 140px;
+    }
+    .SignUpImage {
+      display: none;
+    }
+    .signUpLayout {
+      justify-content: center;
+      margin: 5%;
+  }
+  
+  #home-link {
+    font-size: 16px;
+  }
+  
+  }
+  
+  @media (min-width: 481px) and (max-width: 768px) {
+    .signUpLayout {
+      gap: 50px;
+      padding: 20px;
+      margin: 0;
+  }
+  }

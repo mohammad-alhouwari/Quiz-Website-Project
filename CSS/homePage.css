@@ -123,8 +123,12 @@ button:focus {
     display: grid;
     grid-template-columns: auto;
     box-shadow: 10px 8px 6px #146c94;
+    transform: rotate(0deg);
+    transition: 0.3s ease;
 }
-
+.image img:hover{
+    transform: rotate(10deg);
+}
 .text {
     margin-top: 100px;
     text-align: start;
@@ -211,7 +215,7 @@ footer {
 
     .image-card img {
         width: 200px;
-        margin-top: 10px;
+        margin-top: 75px;
     }
 
     .card h2 {
@@ -270,6 +274,11 @@ footer {
         height: 90%;
         margin-top: 10px;
     }
-
+    .copy {
+        text-align: center;
+        color: white;
+        padding: 10px;
+        font-size: small;
+    }
 
 }
